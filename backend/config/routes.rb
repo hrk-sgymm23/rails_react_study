@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :issues
+  namespace :api do
+    namespace :v1 do
+      resources :issues, only: [:index, :create, :destroy]
+    end
+  end
 end

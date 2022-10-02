@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { IssueList } from "./components/IssueList";
+import { IssueForm } from "./components/IssueForm";
 
-function App() {
+import { getIssues } from "./lib/api/issues";
+import { Issue } from "./interfaces/index";
+
+const App: React.FC = () => {
+  const [issues, setIssues] = useState<Issue[]>([])
+
+  const handleGetIssues = async () => {
+    try {
+      const res = await getIssues()
+      console.log(res)
+
+      if (res?.status === 200) {
+        setIssues(res.data.issues)
+      } else {
+        console.log(res.data.issues)
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    handleGetIssues()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1>Issue App</h1>
+      <IssueForm issues={issues} setIssues={setIssues}/>
+      <IssueList issues={issues} setIssues={setIssues}/>
+    </>
+  )
+
 }
 
-export default App;
+export default App
