@@ -1,12 +1,9 @@
 # railsとreactの勉強用リポジトリ
 
 ## 使っているツール
-###  Discord
-https://www.notion.so/9a0126b0aa65482a907870c2775b7447?v=1ef367425e814ec596864158040b8423
-### Notion
-https://www.notion.so/9a0126b0aa65482a907870c2775b7447?v=1ef367425e814ec596864158040b8423
-### Figma
-https://discord.com/channels/919605905090289675/985892524604395561/1028593525660598322
+###  [Discord](https://www.notion.so/9a0126b0aa65482a907870c2775b7447?v=1ef367425e814ec596864158040b8423)
+### [Notion](https://www.notion.so/9a0126b0aa65482a907870c2775b7447?v=1ef367425e814ec596864158040b8423)
+### [Figma](https://discord.com/channels/919605905090289675/985892524604395561/1028593525660598322)
 
 ## アプリケーション起動手順
 ### 1. リポジトリを持ってくる
