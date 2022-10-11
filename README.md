@@ -1,4 +1,4 @@
-# railsとreactの勉強用リポジトリ
+# railsとreactの勉強用リポジトリです
 
 ## 使っているツール
 ###  [Discord](https://www.notion.so/9a0126b0aa65482a907870c2775b7447?v=1ef367425e814ec596864158040b8423)
